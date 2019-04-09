@@ -1,0 +1,113 @@
+.wrap_features{
+    @include flex(center,center,column,nowrap);
+    background: rgb(255, 255, 255);
+    -webkit-background-size: 100% 100%;
+    background-size: 100%;
+    width: 100%; 
+    min-height: 50vw;
+    height: auto;
+
+    .feature_title{
+        @include text__size-weight-family-color(48px,normal,$font-title,rgb(0, 0, 0));
+        text-transform: uppercase;
+        line-height: 1.2;
+        @include padding_margin(0,0 0 4% 0 );
+          
+    }
+    .feature_close{ 
+        width: 32px;
+        height: 32px;
+    }
+    .feature_thumbs{
+        max-width: 960px;
+        @include padding_margin(0,8% 0  0 0);
+        @include flex(flex-start,center,row,wrap);
+        .thumb{
+            background-color: rgb(255, 255, 255);
+            width: 220px;
+            height: auto;
+            
+            img{  
+                @include padding_margin(0,0 0 5px 0);              
+                width: 100%;
+                height: 160px;
+            }
+            .thumb_title{            
+                @include text__size-weight-family-color(16px,normal,$font-text,rgb(0, 0, 0));
+                
+                line-height: 1.875;
+            }
+        }
+        .first_thumb{
+            @include padding_margin(0,0 13.333px 0 0);
+        }
+        .second_thumb{
+            @include padding_margin(0,0 13.333px 0 13.333px);
+        }
+        .third_thumb{
+            @include padding_margin(0,0 13.333px 0 13.333px);
+        }
+        .fourth_thumb{
+            @include padding_margin(0,0 0 0 13.333px);
+        }
+    }
+}
+
+
+
+@media screen  and (min-width : 640px) and (max-width : 980px) {
+    .wrap_features{ 
+        @include padding_margin(7% 0 7% 0,0);
+        .feature_title{
+            @include padding_margin(0, 0 0 4% 0);
+        }
+        
+        .feature_thumbs{
+            @include padding_margin(0,5%);
+            .thumb{
+
+            }
+            .first_thumb{
+                @include padding_margin(0, 0 10% 20px 0);
+            }
+            .second_thumb{
+                @include padding_margin(0, 0 0 20px 10%);
+            }
+            .third_thumb{
+                @include padding_margin(0,0 10% 0 0);
+            }
+            .fourth_thumb{
+                @include padding_margin(0,0 0 0 10%);
+            }
+        }
+    }
+}
+
+@media screen  and (max-width : 639px) {
+    .wrap_features{ 
+        .feature_title{
+            @include padding_margin(0, 0 0 8% 0);
+        }
+        .feature_thumbs{
+            @include padding_margin(0,12%);
+            .thumb{
+
+            }
+            .first_thumb{
+                @include padding_margin(0,1%);
+            }
+            .second_thumb{
+                @include padding_margin(0,1%);
+            }
+            .third_thumb{
+                @include padding_margin(0,1%);
+            }
+            .fourth_thumb{
+                @include padding_margin(0,1%);
+            }
+        }
+    }
+}
+
+  
+  
